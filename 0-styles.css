@@ -182,5 +182,169 @@ template {
   display: none
 }
 
+/* Fonts
+ ============================= */
+
+ @font-face{
+  font-family: SourceSansPro;
+  src: url(/fonts/SourseSansPro/SourceSansPro-Regular.otf);
+ }
+
+ @font-face {
+  font-family: Spincycle;
+  src: url(/fonts/Spincycle/spincycle_ot.otf);
+ }
 /* Variables
  ============================= */
+
+
+ :root{
+  --main-color-white:#FFFFFF;
+  --main-color-black:#000000;
+  --main-color-red:#FF6565;
+  --main-color-grey:#979797;
+  --main-color-white-gray:#D8D8D8;
+
+/* Background 
+  ============================= */
+
+  --background-default-color:#F2F2F2;
+
+ /* fonts
+  ============================= */
+
+  --font-main:SourceSansPro;
+  --font-secondary:Spincycle;
+
+/* Background images
+  ============================= */
+
+  --background-image:url(/images/headphones_hero_1.jpg);
+  --background-image2:url(/images/headphones_hero_2.jpg);
+
+/* Hover and active states
+  ============================= */
+
+  --color-active:#FF6565;
+  --opacity:0.9;
+
+ }
+
+
+ /* General 
+  ============================= */
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin:0;
+  overflow: none;
+  font-family: var(--font-family-main);
+}
+
+h1{
+  font-size: 2.2em;
+}
+
+p{ 
+  font-size: 1.2em;
+  font-style: normal;
+  text-align: center;
+}
+
+button{
+  width: 160px;
+  height: 44px;
+  background-color: var(--main-color-red);
+  color: var(--main-color-white);
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  opacity: var(--opacity);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color-white);
+}
+
+a:hover{
+  color: var(--color-active);
+}
+
+li{
+  list-style: none;
+  display: inline-block;
+  margin:0px 30px; 
+}
+
+/* layout */
+header {
+  margin: 0;
+}
+
+.header-img {
+  height: 100vh;
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  padding: 3% 10%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.logo img{
+  width: 220px;
+}
+
+.about-container {
+  width: 60%;
+  color: var(--main-color-white);
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 300px; */
+  align-items: center;
+}
+
+.flexbox {
+  text-align: center;
+  padding-top: 25px;
+}
+
+@media screen and (max-width:855px;) {
+  .menu{
+    display: none;
+  }
+
+  .about-container{
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column wrap;
+  }
+}
+
+@media screen and (max-width:480px;) {
+  .about-container{
+    width: 100%;
+  }
+}
